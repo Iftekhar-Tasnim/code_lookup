@@ -53,9 +53,13 @@ const TECHNOLOGY_PATTERNS = {
     'Tailwind CSS': {
         patterns: [
             'tailwind',
-            'tailwindcss'
+            'tailwindcss',
+            'tw-',
+            'from-',
+            'to-',
+            'bg-gradient-to'
         ],
-        confidence: 75
+        confidence: 85
     },
     'Material-UI': {
         patterns: [
@@ -126,9 +130,11 @@ const TECHNOLOGY_PATTERNS = {
     'MySQL': {
         patterns: [
             'mysql',
-            'mysqli'
+            'mysqli',
+            'mysql_',
+            'mysqldump'
         ],
-        confidence: 70
+        confidence: 75
     },
     'PostgreSQL': {
         patterns: [
@@ -208,6 +214,31 @@ const TECHNOLOGY_PATTERNS = {
         patterns: [
             'hotjar',
             'hjsv'
+        ],
+        confidence: 85
+    },
+    
+    // Additional Technologies
+    'WordPress': {
+        patterns: [
+            'wordpress',
+            'wp-content',
+            'wp-includes',
+            'wp-admin'
+        ],
+        confidence: 90
+    },
+    'Shopify': {
+        patterns: [
+            'shopify',
+            'myshopify.com'
+        ],
+        confidence: 90
+    },
+    'WooCommerce': {
+        patterns: [
+            'woocommerce',
+            'wc-'
         ],
         confidence: 85
     }
@@ -292,7 +323,7 @@ function scanWebsite() {
 
 function categorizeTechnology(techName) {
     const frontendTechs = ['React', 'Vue.js', 'Angular', 'jQuery', 'Bootstrap', 'Tailwind CSS', 'Material-UI'];
-    const backendTechs = ['PHP', 'Node.js', 'Python', 'Ruby', 'Java', '.NET'];
+    const backendTechs = ['PHP', 'Node.js', 'Python', 'Ruby', 'Java', '.NET', 'WordPress', 'Shopify', 'WooCommerce'];
     const databaseTechs = ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'];
     const infrastructureTechs = ['Cloudflare', 'AWS', 'Google Cloud', 'Azure'];
     const analyticsTechs = ['Google Analytics', 'Facebook Pixel', 'Hotjar'];

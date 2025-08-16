@@ -1,13 +1,15 @@
-# My Chrome Extension
+# CodeLookup
 
-A Chrome extension plugin with a modern UI and basic functionality.
+A Chrome extension that scans websites to detect technologies, frameworks, databases, and infrastructure used to build them.
 
 ## Features
 
-- Popup interface with modern design
-- Content script integration
-- Background service worker
-- Message passing between components
+- **Technology Detection**: Automatically detects frontend frameworks, backend technologies, databases, and infrastructure
+- **Real-time Scanning**: Scans the current active tab when the extension is opened
+- **Modern UI**: Beautiful Tailwind CSS interface with dark theme
+- **Comprehensive Analysis**: Covers React, Vue, Angular, PHP, Node.js, Python, AWS, Google Cloud, and more
+- **Confidence Scoring**: Each detected technology includes a confidence percentage
+- **Export Reports**: Save scan results for later analysis
 
 ## Installation
 
@@ -18,22 +20,47 @@ A Chrome extension plugin with a modern UI and basic functionality.
 
 ## Usage
 
-1. Click the extension icon in your Chrome toolbar
-2. Use the popup interface to interact with the extension
-3. The extension will run content scripts on web pages
-4. Check the browser console for debug information
+1. **Navigate** to any website you want to analyze
+2. **Click** the extension icon in your Chrome toolbar
+3. **View** the current website URL in the popup
+4. **Click** "Scan Website" to analyze the page
+5. **Review** detected technologies organized by category
+6. **Export** the scan report if needed
+
+## What It Detects
+
+### Frontend Technologies
+- React, Vue.js, Angular, jQuery
+- Bootstrap, Tailwind CSS, Material-UI
+- CSS frameworks and UI libraries
+
+### Backend Technologies  
+- PHP, Node.js, Python, Ruby, Java, .NET
+- Web frameworks and server technologies
+
+### Databases
+- MySQL, PostgreSQL, MongoDB, Redis
+- Database connection patterns
+
+### Infrastructure & Hosting
+- AWS, Google Cloud, Azure, Cloudflare
+- CDN services and hosting providers
+
+### Analytics & Tracking
+- Google Analytics, Facebook Pixel, Hotjar
+- User tracking and analytics tools
 
 ## File Structure
 
 ```
 ├── manifest.json          # Extension configuration
-├── popup.html            # Popup interface HTML
-├── popup.css             # Popup styling
-├── popup.js              # Popup functionality
-├── content.js            # Content script for web pages
+├── popup.html            # Modern Tailwind CSS interface
+├── popup.js              # Website scanning functionality
+├── content.js            # Technology detection engine
 ├── background.js         # Background service worker
-├── icons/                # Extension icons (create this folder)
-└── README.md             # This file
+├── README.md             # This file
+└── icons/                # Extension icons folder
+    └── placeholder.txt   # Icon instructions
 ```
 
 ## Customization

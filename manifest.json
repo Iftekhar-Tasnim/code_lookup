@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "My Chrome Extension",
+  "name": "CodeLookup",
   "version": "1.0.0",
-  "description": "A Chrome extension plugin",
+  "description": "CodeLookup - Scan websites to detect technologies, frameworks, and infrastructure",
   "permissions": [],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "My Extension"
+    "default_title": "CodeLookup"
   },
   "content_scripts": [
     {
@@ -18,8 +18,8 @@
     "service_worker": "background.js"
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/logo (2).png",
+    "48": "icons/logo (2).png",
+    "128": "icons/logo (2).png"
   }
 }

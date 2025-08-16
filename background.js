@@ -1,5 +1,5 @@
-// Background service worker for the extension
-console.log('My Chrome Extension background script loaded!');
+// CodeLookup Background Service Worker
+console.log('CodeLookup background script loaded!');
 
 // Listen for extension installation
 chrome.runtime.onInstalled.addListener(function(details) {
@@ -15,11 +15,11 @@ chrome.runtime.onInstalled.addListener(function(details) {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log('Message received in background:', request);
     
-    if (request.action === 'performBackgroundTask') {
-        // Example background task
+    if (request.action === 'scanWebsite') {
+        // Handle website scanning request
         const result = {
             success: true,
-            message: 'Background task completed',
+            message: 'Website scan initiated',
             timestamp: new Date().toISOString()
         };
         sendResponse(result);
